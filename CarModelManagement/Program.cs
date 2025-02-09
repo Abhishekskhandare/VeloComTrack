@@ -18,6 +18,7 @@ builder.Services.AddCors(options =>
 builder.Services.AddSwaggerGen();
 builder.Services.AddScoped<IAuthService, AuthService>();
 builder.Services.AddScoped<ICarService, CarService>();
+builder.Services.AddScoped<ISalesmanCommissionReportService, SalesmanCommissionReportService>();
 
 var app = builder.Build();
 app.UseStaticFiles(); // Enables serving uploaded images

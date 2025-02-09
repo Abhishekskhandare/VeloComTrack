@@ -13,8 +13,6 @@ namespace CarModelManagement.Controllers
 		private readonly ICarService _carService = carService;
 		private readonly string _uploadPath = configuration["UploadSettings:UploadPath"]??string.Empty;
 
-		private readonly ResponseDto _responseDto = new ResponseDto();
-
 		[HttpPost("add")]
 		public async Task<IActionResult> AddCar([FromForm] CarDto model)
 		{
